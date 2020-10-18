@@ -9,6 +9,9 @@ import androidx.navigation.fragment.findNavController
 import com.empresa.tragos.R
 import kotlinx.android.synthetic.main.fragment_main.*
 
+/**
+ * Created by Norman Sánchez on 18/10/20.
+ */
 class MainFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

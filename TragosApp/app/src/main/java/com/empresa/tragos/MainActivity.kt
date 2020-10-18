@@ -2,15 +2,26 @@ package com.empresa.tragos
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.empresa.tragos.data.DataSource
+import com.empresa.tragos.domain.RepoImpl
+import com.empresa.tragos.ui.viewmodel.MainViewModel
+import com.empresa.tragos.ui.viewmodel.VMFactory
 
+/**
+ * Created by Norman Sánchez on 18/10/20.
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
     private lateinit var navHostFragment: NavHostFragment
+
+    // ViewModel
+    private val viewModel by viewModels<MainViewModel>{ VMFactory(RepoImpl(DataSource()))}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

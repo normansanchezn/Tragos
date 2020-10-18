@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.empresa.tragos.R
 
+/**
+ * Created by Norman Sánchez on 18/10/20.
+ */
 class TragosDetalleFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
